@@ -1,0 +1,306 @@
+/*
+Theme Name: ESGI Theme 2025
+Description: Thème WordPress personnalisé pour ESGI 3IW - Conforme aux maquettes Figma
+Author: Étudiant ESGI
+Version: 1.0.0
+Text Domain: esgi-theme
+*/
+
+/* ==========================================================================
+   RESET & BASE STYLES
+   ========================================================================== */
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 2rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   LAYOUT & CONTAINERS
+   ========================================================================== */
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ==========================================================================
+   HERO IMAGE
+   ========================================================================== */
+
+/* Section Events */
+.events-section {
+    padding: 80px 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-title strong {
+    font-weight: 600;
+}
+
+/* IMAGE À DROITE */
+.hero-image {
+    display: flex;
+    justify-content: flex-end;
+    margin: 60px 0;
+}
+
+.hero-image img {
+    max-width: 600px;
+    width: 600px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+
+
+        /* Styles spécifiques pour éviter les conflits avec le thème ESGI */
+
+        /* Section Services */
+        .services-wrapper {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .services-main-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 50px;
+            color: #2c3e50;
+        }
+
+        .services-layout-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .service-card {
+            position: relative;
+        }
+
+        .service-card-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .service-card-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255,255,255,0.95);
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            backdrop-filter: blur(10px);
+        }
+
+        .service-card-title {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #2c3e50;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Section Partners */
+        .partners-wrapper {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+
+        .partners-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .partners-main-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 50px;
+            color: #2c3e50;
+        }
+
+        .partners-layout-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .partner-logo-item {
+            height: 60px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            filter: grayscale(100%);
+        }
+
+        .partner-logo-item:hover {
+            opacity: 1;
+            transform: scale(1.05);
+            filter: grayscale(0%);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .services-layout-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .services-main-title,
+            .partners-main-title {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+
+            .partners-layout-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 20px;
+            }
+
+            .partner-logo-item {
+                height: 50px;
+            }
+
+            .service-card-title {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Animations */
+        .service-card {
+            animation: fadeInUpServices 0.6s ease-out;
+        }
+
+        .service-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .partner-logo-item {
+            animation: fadeInUpPartners 0.8s ease-out;
+        }
+
+        @keyframes fadeInUpServices {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUpPartners {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
