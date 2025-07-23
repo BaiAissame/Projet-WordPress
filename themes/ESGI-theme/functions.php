@@ -89,3 +89,8 @@ function esgi_create_services_page() {
     }
 }
 add_action('after_setup_theme', 'esgi_create_services_page');
+
+function enqueue_custom_styles() {
+    wp_enqueue_style('custom-style', get_stylesheet_directory_uri() . '/style.css', array(), time());
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
