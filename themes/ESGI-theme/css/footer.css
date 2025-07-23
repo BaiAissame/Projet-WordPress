@@ -1,0 +1,51 @@
+/* Footer */
+
+.site-footer {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    padding: 20px !important;
+    background-color: #1a1a2e !important;
+    color: white !important;
+}
+
+.footer-left {
+    flex: 1 !important;
+    display: flex;
+    justify-content: end;
+}
+
+.footer-right {
+    display: flex;
+    justify-content: end;
+    margin-right: 100px;
+}
+.footer-left-end {
+    display: flex;
+    flex-direction: column;
+}
+.footer-contact{
+    display: flex;
+}
+
+.contact-section {
+    margin-bottom: 20px;
+    margin-right: 100px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #4facfe;
+}
+

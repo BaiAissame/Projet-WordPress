@@ -1,0 +1,77 @@
+/* ==========================================================================
+   HERO IMAGE
+   ========================================================================== */
+
+/* Section Events */
+.events-section {
+    min-height: 50vh;
+}
+.hero-content {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.hero-title {
+    font-size: 4.8rem;
+    font-weight: 300;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    margin-left: 5%;
+}
+
+.hero-title strong {
+    font-weight: 600;
+}
+
+.hero-home-container{
+    display: flex;
+    justify-content: end;
+}
+/* IMAGE À DROITE */
+.hero-image {
+    display: flex;
+    margin: 60px 0;
+    flex-direction: column;
+}
+.hero-image img {
+    width: 1487px;
+    height: 631px;
+
+}
+/* HERO IDENTITY */
+.hero-identity-section{
+    display: flex;
+}
+
+.hero-identity-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    padding-right: 35%;
+}
+.hero-identity-title h1 {
+    color: #050A3A;
+}
+
+/* Section Service */
+
+.service-section {
+    padding-top: 5%;
+}
+.service-title {
+    margin-left: 5%;
+    color: #050A3A;
+    margin-bottom: 2%;
+    font-size: 3.8rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.service-list-img {
+    display: flex;
+}
+.service-list-img img {
+    width: 25%;
+    height: auto;
+}

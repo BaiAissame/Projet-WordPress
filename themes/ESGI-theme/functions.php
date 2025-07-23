@@ -91,6 +91,22 @@ function esgi_create_services_page() {
 add_action('after_setup_theme', 'esgi_create_services_page');
 
 function enqueue_custom_styles() {
-    wp_enqueue_style('custom-style', get_stylesheet_directory_uri() . '/style.css', array(), time());
+    
+    wp_enqueue_style('main-style', get_stylesheet_directory_uri() . '/style.css', array(), time());
+
+    wp_enqueue_style('navigation-style', get_stylesheet_directory_uri() . '/css/navigation.css', array(), time());
+    
+    wp_enqueue_style('about-style', get_stylesheet_directory_uri() . '/css/about.css', array(), time());
+    
+    wp_enqueue_style('footer-style', get_stylesheet_directory_uri() . '/css/footer.css', array(), time());
+
+    wp_enqueue_style('home-style', get_stylesheet_directory_uri() . '/css/home.css', array(), time());
+    
+    wp_enqueue_style('partner-style', get_stylesheet_directory_uri() . '/css/partner.css', array(), time());
+    
+    wp_enqueue_style('search-form-style', get_stylesheet_directory_uri() . '/css/search-form.css', array(), time());
+
+    wp_enqueue_style('service-style', get_stylesheet_directory_uri() . '/css/service.css', array(), time());
 }
+
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');

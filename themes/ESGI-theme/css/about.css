@@ -1,0 +1,33 @@
+/* ABOUT PAGE*/
+
+.about-title {
+    margin-left: 5%;
+    padding-top: 30px;
+    color: #050A3A;
+    font-size: 3.8rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.hero-about-image img {
+    width: 1458px;
+    height: 619px;
+}
+
+.hero-team-container {
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    margin-top: 75px;
+}
+
+.teammate {
+    display: flex;
+    flex-direction: column;
+}
+
+.teammate p {
+    color:gray;
+}

@@ -1,0 +1,19 @@
+/* SERVICE */
+.service-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+}
+
+.service-title {
+    color: #050A3A;
+    margin-bottom: 2%;
+    font-size: 3.8rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.service-page-footer {
+    width: 1920px;
+    height: 631px;
+}

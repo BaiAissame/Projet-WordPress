@@ -1,0 +1,22 @@
+/* Section Partner */
+
+.partner-list-img {
+    display: flex;
+    margin-left: 7%;
+    margin-bottom: 50px;
+}
+
+.partner-list-img img {
+    width: calc(100% / 10);
+    height: auto;
+    margin-right: 7%;
+}
+
+.partner-title {
+    margin-left: 5%;
+    color: #050A3A;
+    margin-bottom: 2%;
+    font-size: 3.8rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
