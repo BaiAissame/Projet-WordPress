@@ -1,21 +1,22 @@
-
 <?php get_header(); ?>
-
-<main>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <div class="error-404">
-                    <h1><?php _e('Page introuvable', 'ESGI'); ?></h1>
-                    <p><?php _e('Essayez de faire une recherche', 'ESGI'); ?></p>
-                    
-                    <div class="search-form-container">
-                        <?php get_search_form(); ?>
-                    </div>
-                </div>
-            </div>
+<style>
+.error-404 {
+    margin-left: 5% !important;
+    color: white;
+}
+.error-page {
+    background-color: #1a1a2e;
+}
+</style>
+<main class="error-page">
+    <div class="error-404">
+        <h1><?php _e('404 Error.', 'ESGI'); ?></h1>
+        <p><?php _e("The page you were looking for couldn't be found.<br>Maybe try a search?", 'ESGI'); ?></p>
+        <div class="search-form-container">
+            <?php get_search_form(); ?>
         </div>
     </div>
+
 </main>
 
 <?php get_footer(); ?>
