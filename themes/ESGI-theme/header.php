@@ -1,16 +1,11 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
+
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         .esgi-header {
             background-color: #1a1a2e;
             color: white;
@@ -150,7 +145,9 @@
             }
         }
     </style>
+    <link href="<?php echo get_stylesheet_uri(); ?>" rel="stylesheet" />
 </head>
+
 <body <?php body_class(); ?>>
 
 <header class="esgi-header">
@@ -177,46 +174,3 @@
         ?>
     </nav>
 </header>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileNav = document.getElementById('mobileNav');
-    
-    menuToggle.addEventListener('click', function() {
-        menuToggle.classList.toggle('active');
-        mobileNav.classList.toggle('active');
-    });
-
-    // Fermer le menu si on clique sur un lien
-    const navLinks = mobileNav.querySelectorAll('a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            menuToggle.classList.remove('active');
-            mobileNav.classList.remove('active');
-        });
-    });
-
-    // Fermer le menu si on clique ailleurs
-    document.addEventListener('click', function(event) {
-        if (!menuToggle.contains(event.target) && !mobileNav.contains(event.target)) {
-            menuToggle.classList.remove('active');
-            mobileNav.classList.remove('active');
-        }
-    });
-});
-</script>
-
-<?php
-// Fonction de fallback pour le menu si aucun menu n'est défini
-function esgi_fallback_menu() {
-    echo '<ul class="esgi-menu">';
-    echo '<li><a href="' . home_url() . '">Home</a></li>';
-    echo '<li><a href="' . home_url() . '/about-us">About Us</a></li>';
-    echo '<li><a href="' . home_url() . '/services">Services</a></li>';
-    echo '<li><a href="' . home_url() . '/partners">Partners</a></li>';
-    echo '<li><a href="' . home_url() . '/blog">Blog</a></li>';
-    echo '<li><a href="' . home_url() . '/contacts">Contacts</a></li>';
-    echo '</ul>';
-}
-?>
