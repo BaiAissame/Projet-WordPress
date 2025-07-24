@@ -17,7 +17,7 @@
 .hero-home-container{
     display: flex;
     justify-content: end;
-    margin-left: 15rem;
+    margin-left: 30rem;
 }
 .hero-image {
     display: flex;
@@ -28,7 +28,6 @@
     width: 100%;
     height: auto;
     aspect-ratio: 1487 / 631;
-    margin-left: 20rem;
 }
 .hero-identity-section{
     display: flex;
@@ -146,5 +145,4 @@
     font-size: 3.8rem;
     font-weight: 300;
     line-height: 1.2;
-    margin-left: 20rem;
 }

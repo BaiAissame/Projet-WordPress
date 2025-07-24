@@ -19,6 +19,75 @@ function esgi_enqueue_scripts()
     wp_enqueue_script('esgi-menu-script', get_template_directory_uri() . '/src/js/menu.js', array(), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'esgi_enqueue_scripts');
+function esgi_customize_register($wp_customize)
+{
+    $wp_customize->add_section('esgi_team_section', array(
+        'title' => __('Membres de l\'équipe', 'ESGI'),
+        'priority' => 30,
+    ));
+    for ($i = 1; $i <= 4; $i++) {
+        $wp_customize->add_setting("esgi_team_member_$i", array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_text_field',
+        ));
+        $wp_customize->add_control("esgi_team_member_$i", array(
+            'label' => __('Nom du membre ' . $i, 'ESGI'),
+            'section' => 'esgi_team_section',
+            'type' => 'text',
+        ));
+        $wp_customize->add_setting("esgi_team_member_img_$i", array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw',
+        ));
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, "esgi_team_member_img_$i", array(
+            'label' => __('Photo du membre ' . $i, 'ESGI'),
+            'section' => 'esgi_team_section',
+        )));
+
+        $wp_customize->add_setting("esgi_team_member_tel_$i", array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_text_field',
+        ));
+        $wp_customize->add_control("esgi_team_member_tel_$i", array(
+            'label' => __('Téléphone du membre ' . $i, 'ESGI'),
+            'section' => 'esgi_team_section',
+            'type' => 'text',
+        ));
+
+        $wp_customize->add_setting("esgi_team_member_mail_$i", array(
+            'default' => '',
+            'sanitize_callback' => 'sanitize_email',
+        ));
+        $wp_customize->add_control("esgi_team_member_mail_$i", array(
+            'label' => __('Email du membre ' . $i, 'ESGI'),
+            'section' => 'esgi_team_section',
+            'type' => 'email',
+        ));
+    }
+
+    $wp_customize->add_section('esgi_partners_section', array(
+        'title' => __('Logos des partenaires', 'ESGI'),
+        'priority' => 31,
+    ));
+    for ($i = 1; $i <= 6; $i++) {
+        $wp_customize->add_setting("esgi_partner_logo_$i", array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw',
+        ));
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, "esgi_partner_logo_$i", array(
+            'label' => __('Logo partenaire ' . $i, 'ESGI'),
+            'section' => 'esgi_partners_section',
+        )));
+    }
+}
+add_action('customize_register', 'esgi_customize_register');
+
+function esgi_allow_svg_upload($mimes)
+{
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'esgi_allow_svg_upload');
 
 function esgi_fallback_menu()
 {

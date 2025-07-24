@@ -1,25 +1,30 @@
 <section class="events-section">
     <h1 class="about-title">Our Team</h1>
     <div class="hero-team-container">
-        <div class="teammate">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/teammate1.png" loading="lazy">
-            <h1>Sales Manager</h1>
-            <p>+33 1 53 31 25 23<br>sales@company.com</p>
-        </div>
-        <div class="teammate">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/teammate2.png" loading="lazy">
-            <h1>Event planner</h1>
-            <p>+33 1 53 31 25 24<br>plan@company.com</p>
-        </div>
-        <div class="teammate">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/teammate3.png" loading="lazy">
-            <h1>Designer</h1>
-            <p>+33 1 53 31 25 20<br>design@company.com</p>
-        </div>
-        <div class="teammate">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/teammate4.png" loading="lazy">
-            <h1>CEO</h1>
-            <p>+33 1 53 31 25 25<br>ceo@company.com</p>
-        </div>
+        <?php for ($i = 1; $i <= 4; $i++): ?>
+            <?php
+            $name = get_theme_mod("esgi_team_member_$i");
+            $img = get_theme_mod("esgi_team_member_img_$i");
+            $tel = get_theme_mod("esgi_team_member_tel_$i");
+            $mail = get_theme_mod("esgi_team_member_mail_$i");
+            ?>
+            <?php if ($name || $img || $tel || $mail): ?>
+                <div class="teammate">
+                    <?php if ($img): ?>
+                        <img src="<?php echo esc_url($img); ?>" loading="lazy" alt="<?php echo esc_attr($name); ?>">
+                    <?php endif; ?>
+                    <?php if ($name): ?>
+                        <h1><?php echo esc_html($name); ?></h1>
+                    <?php endif; ?>
+                    <?php if ($tel || $mail): ?>
+                        <p>
+                            <?php if ($tel): ?>                 <?php echo esc_html($tel); ?><br><?php endif; ?>
+                            <?php if ($mail): ?><a
+                                    href="mailto:<?php echo esc_attr($mail); ?>"><?php echo esc_html($mail); ?></a><?php endif; ?>
+                        </p>
+                    <?php endif; ?>
+                </div>
+            <?php endif; ?>
+        <?php endfor; ?>
     </div>
 </section>
