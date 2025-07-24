@@ -1,17 +1,25 @@
 /* ABOUT PAGE*/
 
-.about-title {
-    margin-left: 5%;
-    padding-top: 30px;
-    color: #050A3A;
-    font-size: 3.8rem;
+.hero-about-title {
+    font-size: 4.5rem;
     font-weight: 300;
+    color: #050A3A;
+    margin-bottom: 20px;
     line-height: 1.2;
+    padding-left: 160px;
+}
+
+
+.about-description {
+    color: #8A8A8A;
+    margin-left: 20rem;
+    margin-right: 27.1rem;
 }
 
 .hero-about-image img {
-    width: 1458px;
-    height: 619px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1458 / 619;
 }
 
 .hero-team-container {

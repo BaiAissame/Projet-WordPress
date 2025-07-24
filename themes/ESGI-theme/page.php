@@ -1,5 +1,4 @@
 <?php
-// Template pour afficher des pages seules
 
 get_header();
 ?>

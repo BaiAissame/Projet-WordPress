@@ -1,17 +1,17 @@
 /* Footer */
 
 .site-footer {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: flex-start !important;
-    padding: 20px !important;
-    background-color: #1a1a2e !important;
-    color: white !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #050A3A;
+    color: white;
 }
 
 .footer-left {
-    flex: 1 !important;
+    flex: 1;
     display: flex;
     justify-content: end;
 }

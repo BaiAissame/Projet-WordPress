@@ -3,7 +3,7 @@
    ========================================================================== */
 
    .esgi-header {
-    background-color: #1a1a2e;
+    background-color: #050A3A;
     color: white;
     padding: 20px;
     position: relative;
@@ -12,6 +12,7 @@
     align-items: center;
     justify-content: space-between;
     z-index: 1001;
+    transition: background-color 0.3s ease;
 }
 
 .esgi-logo {
@@ -42,15 +43,13 @@
 }
 
 .menu-toggle.active .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(0, 5px);
+    transform-origin: center;
 }
 
 .menu-toggle.active .hamburger-line:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle.active .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+    transform: rotate(-45deg) translate(0, -5px);
+    transform-origin: center;
 }
 
 .esgi-nav {
@@ -59,21 +58,24 @@
     left: 0;
     right: 0;
     width: 100%;
-    background-color: #1a1a2e;
-    max-height: 0;
+    background-color: #050A3A;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: none;
     z-index: 1000;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    padding: 0;
+    padding-right: 160px;
+    padding-bottom: 50px;
+    opacity: 0;
+    transition:
+        opacity 0.3s ease;
 }
 
 .esgi-nav.active {
-    max-height: 400px;
-    padding: 20px;
-    box-sizing: border-box;
+    padding-right: 160px;
+    padding-bottom: 50px;
+    opacity: 1;
 }
 
 .nav-header {
@@ -91,10 +93,11 @@
     gap: 20px;
     margin: 0;
     padding: 0;
+    align-items: flex-end;
     text-align: right;
 }
 .esgi-nav ul li a {
-    font-size: 18px;
+    font-size: 4rem;
     border-bottom: none;
     padding: 10px 0;
 }
