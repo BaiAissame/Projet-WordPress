@@ -62,20 +62,20 @@
     overflow: hidden;
     transition: none;
     z-index: 1000;
-    display: flex;
+    display: none;
     flex-direction: column;
     box-sizing: border-box;
     padding-right: 160px;
     padding-bottom: 50px;
     opacity: 0;
-    transition:
-        opacity 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
 .esgi-nav.active {
     padding-right: 160px;
     padding-bottom: 50px;
     opacity: 1;
+    display: flex;
 }
 
 .nav-header {
